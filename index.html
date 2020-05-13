@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166328223-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-166328223-1');
+    </script>
+    <meta charset="utf-8">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="Style.css">
+    <title>The Number Guess</title>
+  </head>
+  <body onload="image_generator()">
+    <div class="top">
+      <div class="text_and_image">
+        <div class="text_buttons">
+          <p id="opening_text">Getting Bored in The Lockdown</p>
+            <div class="buttons_image">
+              <div class="tab_image">
+                <img src="" id="tab_opening_image">
+              </div>
+            <div class="buttons">
+              <div class="yes_button"><a href="#challenge_description">
+                <button type="button" name="Yes" onclick="displayer()" id="yes_button">Yes</button></a>
+              </div>
+              <div class="no_button"><a href="#challenge_description">
+                <button type="button" name="No" onclick="displayer()" id="no_button">No</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="opening_image_container">
+          <img src=""  id="opening_image">
+        </div>
+      </div>
+    </div>
+    <div class="challenge_description" id="challenge_description">
+          <div class="rules_name">
+            <div class="challenge_name">
+            <p id="first_line">Then Take</p>
+            <p id="second_line">The Number Guess Challenge</p>
+          </div>
+              <div class="rules_scoring">
+                <div class="rules">
+                  <div class="rules_heading">
+                    RULES
+                  </div>
+                  <div class="rules_descrption">
+                    <ul>
+                      <li>A random number will be generated in the range of 1 to 100(both inclusive).</li>
+                      <li>You need to guess that number in 5 chances.</li>
+                      <li>Based on your performance your score will be generated.</li>
+                      <li>Share that score with your friends and nominate them to take the challege.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="scoring">
+                  <div class="scoring_heading">
+                    SCORING
+                  </div>
+                  <div class="scoring_descrption">
+                   <ul>
+                     <li id="descrption">If you guess the correct number then you will be 200 points.</li>
+                     <li>You will get 100 points for each chance left.</li>
+                     <li>If you guess the correct number then your final score will be the sum of the above two scores.</li>
+                     <li>If you fail to guess the correct number then your final score will be 100 divided by the minimum difference between the original number and the guessed number.</li>
+                   </ul>
+                 </div>
+                </div>
+              </div>
+        </div>
+        <div class="take_the_challenge_button"><a href="#guessed_number">
+          <button type="button" name="take_the_challenge" id="take_the_challenge" onclick="challenge_displayer()">Take The  Challenge</button></a>
+        </div>
+      </div>
+    <div class="the_challenge" id="the_challenge">
+        <div class="challenge_container" id="challenge_container">
+        <div class="input_number" id="input_number">
+          <div class="input_field">
+            <input type="text" name="guessed_number" value="" id="guessed_number" placeholder="Your Guess">
+          </div>
+          <div class="check_button">
+            <button type="button" name="button" id="check_button" onclick="chances_counter();checker();">CHECK</button>
+          </div>
+        </div>
+        <div class="result_score" id="result_score">
+          <p id="written_result"></p>
+          <p id="correct_answer"></p>
+          <p id="final_score"></p>
+          <div class="after_result">
+            <div class="share">
+              <a href="#share_container"><button type="button" name="button" id="share_button">Share</button></a>
+            </div>
+            <div class="retake">
+              <a href="#the_challenge"><button type="button" name="button" id="retake_button" onclick="reset_variable()">Retake Challenge</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="result_output" id="result_output">
+          <div class="chances_left" id="chances_left">
+            <p id="text_chances_left">Chances Left: 5</p>
+          </div>
+          <div class="result_descrption" id="result_descrption">
+            <div id="first_attempt"></div>
+            <div id="second_attempt"></div>
+            <div id="third_attempt"></div>
+            <div id="fourth_attempt"></div>
+            <div id="fifth_attempt"></div>
+          </div>
+          <div class="result_image">
+            <img src="" alt="" id="result_image">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="share_feedback" id="share_feedback">
+      <div class="share_feedback_container" id="share_feedback_container">
+        <div class="share_container" id="share_container">
+          <div class="share_text">
+            <p>Take the screenshot of the above score and share it with your friends</p>
+          </div>
+            <div class="logo_container">
+              <div class="facebook_logo">
+                <a href="https://www.facebook.com/"><img src="https://img.icons8.com/android/24/000000/facebook-new.png" class="logo_img"></a>
+              </div>
+              <div class="instagram_logo">
+                <a href="https://www.instagram.com/?hl=en"><img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png"/ height="24px" width="24px" class="logo_img"></a>
+              </div>
+              <div class="twitter_logo">
+                <a href="https://twitter.com/home"><img src="https://img.icons8.com/material/24/000000/twitter--v1.png" class="logo_img"></a>
+              </div>
+              <div class="snapchat_logo">
+                <a href="https://www.snapchat.com/"><img src="https://img.icons8.com/material-outlined/24/000000/snapchat.png"/ class="logo_img"></a>
+              </div>
+            </div>
+        </div>
+        <div class="feedback_container">
+            <div class="feedback_text_container">
+              <p id="feedback_text">Contact the Developer to give feedback</p>
+            </div>
+            <div class="feedback_form">
+              <form class="contactform" onsubmit="formvalidation()" netlify>
+                <div class="name"><input type="text" name="name" id="name" placeholder="Your Name(required)" autocomplete="off"></div>
+                <div class="email"><input type="email" name="email" id="email" placeholder="Your Email(required)" autocomplete="off"></div>
+                <div class="subject"><input type="text" name="subject" id="subject" placeholder="Subject" autocomplete="off"></div>
+                <div class="msg"><input type="textarea" name="msg" id="msg" autocomplete="off" placeholder="Message"></div>
+                <div class="btn" ><input type="submit" name="btn" id="btn" placeholder="Submit"></div>
+              </form>
+        </div>
+         </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="logic.js">
+  </script>
+</html>
