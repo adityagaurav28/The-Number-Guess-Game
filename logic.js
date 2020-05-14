@@ -1,4 +1,3 @@
-alert("For mobile use landscape mode for best expierence. The developer is working on it to fix the issue on the portrait mode");
 function image_generator() {
   var one="https://images.unsplash.com/photo-1523478016374-2a27cc521718?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60";
   var two="https://images.unsplash.com/photo-1566833769731-c1aeddf0f3ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60";
@@ -164,6 +163,7 @@ function checker() {
     document.getElementById("final_score").innerHTML="Final Score: "+score;
     congratulation_image_generator();
     document.getElementById("share_feedback").style.display='block';
+    document.getElementById("challenge_container").style.height='100%';
   }
   if (chances_left==0&&guessed_number!=generated_number)
   {
@@ -177,6 +177,7 @@ function checker() {
     document.getElementById("final_score").innerHTML="Final Score: "+score;
     sorry_image_generator();
     document.getElementById("share_feedback").style.display='block';
+    document.getElementById("challenge_container").style.height='100%';
   }
 }
 
@@ -196,6 +197,7 @@ function reset_variable() {
   generated_number=Math.floor((Math.random()*100)+1);
   document.getElementById("text_chances_left").innerHTML="Chances Left: "+chances_left;
   document.getElementById("guessed_number").value="";
+  document.getElementById("challenge_container").style.height='1100px';
 }
 function formvalidation() {
   var name = document.getElementById("name").value;
