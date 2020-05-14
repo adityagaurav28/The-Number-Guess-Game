@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166328223-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-166328223-1');
-    </script>
     <meta charset="utf-8">
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
@@ -18,6 +9,14 @@
     <title>The Number Guess</title>
   </head>
   <body onload="image_generator()">
+    <div class="screen_width_test">
+      <p id="desktop"></p>
+      <p id="width_1100"></p>
+      <p id="width_990"></p>
+      <p id="width_920"></p>
+      <p id="width_700"></p>
+      <p id="width_425"></p>
+    </div>
     <div class="top">
       <div class="text_and_image">
         <div class="text_buttons">
@@ -87,7 +86,9 @@
             <input type="text" name="guessed_number" value="" id="guessed_number" placeholder="Your Guess">
           </div>
           <div class="check_button">
+            <a href="#result_image">
             <button type="button" name="button" id="check_button" onclick="chances_counter();checker();">CHECK</button>
+            </a>
           </div>
         </div>
         <div class="result_score" id="result_score">
