@@ -119,7 +119,7 @@ button{
   display: flex;
   padding: 25px;
   background: linear-gradient(90deg,#de6262,#ffb88c);
-  height: 620px;
+  height: 1100px;
 }
 .input_number{
   flex: 1;
@@ -233,6 +233,7 @@ button{
   padding-bottom: 25px;
 }
 #name,#email,#subject,#msg,#btn{
+  padding: 10px;
   font-size: 15px;
   width: 50%;
   height: 30px;
@@ -266,7 +267,16 @@ button{
     opacity: 1;
   }
 }
+#width_1100,#width_990,#width_920,#width_700,#width_425{
+  display: none;
+}
 @media screen and (max-width:1100px) {
+  #desktop,#width_990,#width_920,#width_700,#width_425{
+    display: none;
+  }
+  #width_1100{
+    display: block;
+  }
   .top{
     padding: 20px;
   }
@@ -291,6 +301,9 @@ button{
   }
   .rules_scoring{
     padding-left: 20px;
+  }
+  .challenge_container{
+    height: 700px;
   }
   #guessed_number{
     font-size: 40px;
@@ -320,18 +333,60 @@ button{
   }
 }
 @media screen and (max-width:990px){
+  #desktop,#width_1100,#width_920,#width_700,#width_425{
+    display: none;
+  }
+  #width_990{
+    display: block;
+  }
+  #opening_text{
+    font-size: 150px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+  .buttons_image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+  .opening_image_container{
+      display: none;
+  }
+  .tab_image{
+      display: block;
+      text-align: center;
+      padding-bottom: 70px;
+  }
   #tab_opening_image{
-    height: 450px;
-    width: 450px;
+    height: 800px;
+    width: 800px;
   }
   #yes_button,#no_button,#share_button,#retake_button,#check_button{
     width: 150px;
   }
+  .rules_name{
+    flex-direction: column;
+  }
+  #first_line,.rules_heading,.scoring_heading{
+    font-size: 100px;
+  }
   #second_line{
-    font-size: 85px;
+    font-size: 150px;
+  }
+  .rules_descrption,.scoring_descrption{
+    font-size: 50px;
+  }
+  .challenge_container{
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    height: 1100px;
+  }
+  .input_number,.chances_left,.result_descrption{
+    vertical-align: middle;
   }
   #guessed_number{
-    font-size: 35px;
+    font-size: 70px;
   }
   #check_button{
     font-size: 23px;
@@ -340,21 +395,60 @@ button{
   #retake_button{
     font-size: 25px;
   }
+  .result_output{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   .chances_left{
-    font-size: 55px;
+    font-size: 100px;
   }
   .result_descrption{
-    font-size: 22px;
+    font-size: 50px;
+    padding-bottom: 100px;
   }
   .result_image img{
-    width: 400px;
-    height: 300px;
+    width: 900px;
+    height: 700px;
+    padding-bottom: 100px;
+  }
+  #written_result,#correct_answer,#final_score{
+    font-size: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  #final_score{
+    padding-bottom: 100px;
+  }
+  .after_result{
+    padding-bottom: 100px;
+  }
+  .share_feedback_container{
+    flex-direction: column;
   }
   .share_container{
-    font-size: 45px;
+    font-size: 60px;
+    padding: 40px 80px 40px 80px;
+  }
+  #feedback_text{
+    font-size: 30px;
+  }
+  #name,#email,#subject{
+    width: 40%;
+    height: 60px;
+    font-size: 30px;
+  }
+  #msg{
+    width: 40%;
+    font-size: 30px;
   }
 }
 @media screen and (max-width:920px) {
+  #desktop,#width_1100,#width_990,#width_700,#width_425{
+    display: none;
+  }
+  #width_920{
+    display: block;
+  }
   #opening_text{
     font-size: 70px;
   }
@@ -400,6 +494,12 @@ button{
   }
 }
 @media screen and (max-width:700px) {
+  #desktop,#width_1100,#width_990,#width_920,#width_425{
+    display: none;
+  }
+  #width_700{
+    display: block;
+  }
   .buttons_image{
     flex-direction: column;
   }
@@ -434,6 +534,12 @@ button{
   }
 }
 @media screen and (max-width:425px) {
+  #desktop,#width_1100,#width_990,#width_920,#width_700{
+    display: none;
+  }
+  #width_425{
+    display: block;
+  }
   #opening_text{
     font-size: 40px;
   }
