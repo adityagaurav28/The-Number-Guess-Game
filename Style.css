@@ -1,39 +1,28 @@
-html{
-  font-family: 'Balsamiq Sans', cursive;
-  scroll-behavior: smooth;
-}
-*{
-  margin: 0;
-  padding: 0;
-}
-body{
-  height: 100%;
-}
 .top{
   background: linear-gradient(#195190FF,#A2A2A1FF);
   padding: 50px;
   height: 100%;
 }
-.text_and_image{
+.top .text_and_image{
   display: flex;
   animation: fadein 2s ease;
 }
-#opening_text{
+.top #opening_text{
   font-size: 110px;
   text-align: center;
   padding-right: 10px;
   color: #f2eaea;
 }
-.tab_image{
+.top .tab_image{
   display: none;
 }
-.buttons{
+.top .buttons{
   text-align: center;
   padding: 20px;
   display: flex;
   justify-content: space-around;
 }
-button{
+.top button{
   width: 200px;
   height: 75px;
   font-size: 40px;
@@ -45,12 +34,12 @@ button{
   background-color: #c3df91;
   transition: 0.5s ease;
 }
-#yes_button:hover,#no_button:hover,#take_the_challenge:hover,#check_button:hover,#share_button:hover,#retake_button:hover,#btn:hover{
+.top #yes_button:hover,#no_button:hover,#take_the_challenge:hover,#check_button:hover,#share_button:hover,#retake_button:hover,#btn:hover{
   background: transparent;
   border-color: transparent;
   color: white;
 }
-#opening_image{
+.top #opening_image{
   height: 500px;
   width: 500px;
   padding: 10px;
